@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign UP</title>
+</head>
+<body>
+<p>Sign up</p>
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        Username:
+        {{ form.username }}
+        Password
+        {{ form.password1 }}
+        Confirm password
+        {{ form.password2 }}
+        <br>
+        {% for key, value in form.errors.items %}
+            {{ key }}{{ value }}
+        {% endfor %}
+        {% for message in messages %}
+            <p id="messages">{{ message }}</p>
+        {% endfor %}
+        <input type="submit" typeof="Sign Up">
+        <p>Dang nhap</p>: <a href="/login">Dang nhap</a>
+    </form>
+</div>
+</body>
+</html>

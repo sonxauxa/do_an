@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>25/05/2021 : 16:27</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/8ab99d9feacea4eac75e79eeb84fcc63f969965477c96b4ea314f1e801c71db8.xlsx</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/document/1</rep_dest>
+    </titre>
+    <resume>
+        <ana>1</ana>
+        <acc>0</acc>
+        <nett>0</nett>
+        <ref>1</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>8ab99d9feacea4eac75e79eeb84fcc63f969965477c96b4ea314f1e801c71db8.xlsx</nom>
+            <resultat>Refusé</resultat>
+            <comment>Open XML document : Unauthorized or unknown file format</comment>
+        </fichier>
+    </analyse>
+</rapport>

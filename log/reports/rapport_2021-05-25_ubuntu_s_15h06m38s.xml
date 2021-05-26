@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>25/05/2021 : 15:06</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/mn.xlsx</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/pdfs</rep_dest>
+    </titre>
+    <resume>
+        <ana>13</ana>
+        <acc>11</acc>
+        <nett>1</nett>
+        <ref>1</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>mn.xlsx/[Content_Types].xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/_rels/.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>ASCII Text file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/workbook.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/_rels/workbook.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/worksheets/sheet1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/theme/theme1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/styles.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/worksheets/_rels/sheet1.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/printerSettings/printerSettings1.bin</nom>
+            <resultat>Refusé</resultat>
+            <comment>Unauthorized file extension</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/xl/calcChain.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/docProps/core.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx/docProps/app.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>mn.xlsx</nom>
+            <resultat>Nettoyé</resultat>
+            <comment>Open XML document : Cleaned file</comment>
+        </fichier>
+    </analyse>
+</rapport>
