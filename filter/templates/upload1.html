@@ -1,16 +1,21 @@
 {% extends 'index.html' %}
 
 {% block content2 %}
-    <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form }}
-        {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-        <input type="submit" name="Upload">
-    </form>
+    <div class="container d-flex justify-content-center align-content-center">
+        <div class="border p-3">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <br>
+                <button type="submit" class="btn btn-danger btn-sm">Submit</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}

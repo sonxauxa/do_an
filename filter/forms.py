@@ -12,7 +12,7 @@ class CreateUserForm(UserCreationForm):
 
 
 class UpLoad(forms.Form):
-    file_field = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
+    file_field = forms.FileField(label="Chon file", widget=forms.ClearableFileInput(attrs={'multiple': True}))
 
 
 class DownLoadFile(forms.Form):

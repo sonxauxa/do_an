@@ -4,59 +4,30 @@
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0"
+                   bgcolor="white">
                 <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Cover</th>
-                    <th>File Name</th>
-                    <th>Owner</th>
-                    <th>View</th>
-                    <th>Download</th>
+                    <th class="col-sm-9">Tên</th>
+                    <th class="col-sm-3"></th>
                 </tr>
                 </thead>
                 <tbody>
-
-                {% if messages %}
-                    {% for message in messages %}
-                        alert('{{ message }}')
-                    {% endfor %}
-                {% endif %}            <!-- if and for loop -->
+                <!-- if and for loop -->
                 {% if files %}
                     {% for file in files %}
-
-
                         <tr>
-                            <td>{{ forloop.counter }}</td>
-
-                            <td>
-                                {% if file.cover %}
-                                    <img src="{{ file.cover.url }}" alt="{{ file.name }}"
-                                         style="width:100px; height: 100px">
-                                {% else %}
-                                    <span class="text-muted">{{ file.pdf.url }}</span>
-                                {% endif %}
-                            </td>
-
                             <!-- filename and owner -->
                             <td>{{ file.name }}</td>
-                            <td>{{ file.owner }}</td>
-                            <td>
-
+                            <td class="align-content-center d-flex justify-content-center">
                                 {% if file.pdf %}
-                                    <a href="{{ file.pdf.url }}" class="btn btn-outline-primary" target="_blank">
-                                        View PDF</a>
+                                    <a href="{{ file.pdf.url }}" download class="btn btn-outline-success btn-sm m-1">
+                                        Tải xuống</a>
                                 {% else %}
-                                    <span class="text-muted">No PDF</span>
+                                    <span class="text-muted">Trống</span>
                                 {% endif %}
-                            </td>
-
-                            <td>
                                 {% if file.pdf %}
-                                    <a href="{{ file.pdf.url }}" download class="btn btn-outline-success">
-                                        Download PDF</a>
-                                {% else %}
-                                    <span class="text-muted">No PDF</span>
+                                    <a href="{% url 'delete' file.name %}" class="btn btn-outline-danger btn-sm m-1">Xóa</a>
                                 {% endif %}
                             </td>
                         </tr>
@@ -66,26 +37,40 @@
                 {% endif %}
                 </tbody>
             </table>
+            {% if messages %}
+                <p>File không thể làm sạch hoặc đã bị chặn</p>
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
             {% if is_paginated %}
-                <ul class="pagination">
-                    {% if page_obj.has_previous %}
-                        <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
-                    {% else %}
-                        <li class="disabled"><span>&laquo;</span></li>
-                    {% endif %}
-                    {% for i in paginator.page_range %}
-                        {% if page_obj.number == i %}
-                            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-                        {% else %}
-                            <li><a href="?page={{ i }}">{{ i }}</a></li>
-                        {% endif %}
-                    {% endfor %}
-                    {% if page_obj.has_next %}
-                        <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
-                    {% else %}
-                        <li class="disabled"><span>&raquo;</span></li>
-                    {% endif %}
-                </ul>
+                <div class="d-flex flex-row align-content-center justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            {% if page_obj.has_previous %}
+                                <li class="page-item"><a class="page-link"
+                                                         href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                                </li>
+                            {% endif %}
+                            {% for i in paginator.page_range %}
+                                {% if page_obj.number == i %}
+                                    <li class="active page-item"><span class="page-link">{{ i }} <span
+                                            class="sr-only">(current)</span></span></li>
+                                {% else %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if page_obj.has_next %}
+                                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                                </li>
+                            {% else %}
+                                {% if page_obj.has_next %}
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                {% endif %}
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
             {% endif %}
         </div>
     </form>

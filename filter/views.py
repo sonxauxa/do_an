@@ -1,22 +1,20 @@
-from builtins import super
-
-from django.contrib.auth.models import User
-from django.shortcuts import render, redirect, HttpResponse
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import authenticate, login, logout
-from .forms import CreateUserForm, UpLoad, DownLoadFile
-from django.contrib import messages
-from django.views import generic
-from django.contrib.auth.decorators import login_required
-from django.views.generic.edit import FormView
-from .decorators import authenticated_user
-from .models import FileFormUpLoad, Files, Pelcon
-from django.contrib.auth.mixins import LoginRequiredMixin
-from subprocess import *
-import subprocess
-from .models import Pelcon
 import os
+import subprocess
 import time
+
+import numpy as np
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, redirect, HttpResponse
+from django.views import generic
+from django.views.generic.edit import FormView
+
+from .decorators import authenticated_user
+from .forms import CreateUserForm, UpLoad
+from .models import FileFormUpLoad
+from .models import Pelcon
 
 LOGIN_URL = 'your_url'
 BASE_DIR1 = '/home/s/Desktop/djangoProject1/document/'
@@ -123,38 +121,44 @@ class UpLoadMultiFile(LoginRequiredMixin, FormView):
     redirect_field_name = 'redirect_to'
     form_class = UpLoad
     template_name = 'upload1.html'  # Replace with your template.
-    success_url = '/'  # Replace with your URL or reverse().
+    success_url = '/download/'  # Replace with your URL or reverse().
 
     def post(self, request, *args, **kwargs):
         form_class = self.get_form_class()
         form = self.get_form(form_class)
         files = request.FILES.getlist('file_field')
-        count_file_in = 0
-        count_file_out = 0
+        error_file = []
+
         if form.is_valid():
             # clear data
             Pelcon.objects.all().delete()
             FileFormUpLoad.objects.all().delete()
             # exc clean file
             for f in files:
-                count_file_in += 1
                 instance = FileFormUpLoad(file=f, owner=self.request.user.id)
                 instance.save()
                 subprocess.run(
-                    'python2 /home/s/Desktop/exefilter/ExeFilter.py /home/s/Desktop/djangoProject1/document/' + f.name + ' ' + '-d' + ' ' + '/home/s/Desktop/djangoProject1/store/document' + "/" + str(
+                    'python2 /home/s/Desktop/exefilter/ExeFilter.py /home/s/Desktop/djangoProject1/document/' + str(
+                        f.name) + ' ' + '-d' + ' ' + '/home/s/Desktop/djangoProject1/store/document' + "/" + str(
                         self.request.user.id), shell=True)
             # get form from user folder to save
             try:
                 for i in os.listdir('/home/s/Desktop/djangoProject1/store/document' + '/' + str(self.request.user.id)):
-                    count_file_out += 1
                     instance = Pelcon(pdf='/store/document/' + str(self.request.user.id) + '/' + i,
                                       owner=self.request.user.id, name=i)
                     if instance:
                         instance.save()
                     else:
                         return HttpResponse('/error')
-                if count_file_out < count_file_in:
-                    messages.info(self.request, "Mot so file khong the lam sach")
+                path1 = "/home/s/Desktop/djangoProject1/document/"
+                for file in os.listdir(path1):
+                    print(os.path.exists(path1 + '/' + file))
+                    if not os.path.exists('/home/s/Desktop/djangoProject1/store/document' + '/' + str(
+                            self.request.user.id) + '/' + file):
+                        error_file.append(file)
+                if len(error_file) > 0:
+                    for error in error_file:
+                        messages.error(self.request, error, extra_tags="error_file")
             except Exception as e:
                 return render(request, 'index.html', {'error': e})
             time.sleep(0.5)
@@ -164,3 +168,12 @@ class UpLoadMultiFile(LoginRequiredMixin, FormView):
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
+
+
+def delete_item(request, name):
+    event = Pelcon.objects.get(name=name)
+    event.delete()
+    path = '/home/s/Desktop/djangoProject1/document'
+    for f in os.listdir(path):
+        os.remove(os.path.join(path, f))
+    return redirect('/download/')
