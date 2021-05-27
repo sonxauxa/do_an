@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>26/05/2021 : 08:31</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/cleanfile.docx</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/document/1</rep_dest>
+    </titre>
+    <resume>
+        <ana>17</ana>
+        <acc>17</acc>
+        <nett>0</nett>
+        <ref>0</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>cleanfile.docx/[Content_Types].xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/_rels/.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>ASCII Text file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/_rels/document.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/document.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/footnotes.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/endnotes.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/footer1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/theme/theme1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/settings.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/_rels/settings.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/webSettings.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/styles.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/numbering.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/docProps/core.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/word/fontTable.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx/docProps/app.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>cleanfile.docx</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML document : Accepted file</comment>
+        </fichier>
+    </analyse>
+</rapport>

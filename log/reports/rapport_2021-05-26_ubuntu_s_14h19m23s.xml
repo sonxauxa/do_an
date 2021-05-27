@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>26/05/2021 : 14:19</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/dcfd0195dac36cc1d0747a6b40293e07ca1d174047f5267bee474afc4d565fb7.doc</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/document/4</rep_dest>
+    </titre>
+    <resume>
+        <ana>1</ana>
+        <acc>0</acc>
+        <nett>0</nett>
+        <ref>1</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>dcfd0195dac36cc1d0747a6b40293e07ca1d174047f5267bee474afc4d565fb7.doc</nom>
+            <resultat>Refusé</resultat>
+            <comment>RTF Document : Unauthorized or unknown file format</comment>
+            <comment>ASCII Text file : Unauthorized or unknown file format</comment>
+            <comment>MS Word Document : Unauthorized or unknown file format</comment>
+        </fichier>
+    </analyse>
+</rapport>

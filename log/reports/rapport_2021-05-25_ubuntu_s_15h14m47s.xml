@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>25/05/2021 : 15:14</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/don_xin_nghi1.docx</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/pdfs</rep_dest>
+    </titre>
+    <resume>
+        <ana>1</ana>
+        <acc>0</acc>
+        <nett>0</nett>
+        <ref>0</ref>
+        <err>1</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>don_xin_nghi1.docx</nom>
+            <resultat>Erreur</resultat>
+            <comment>Open XML document : Error while cleaning (decoding Unicode is not supported)</comment>
+        </fichier>
+    </analyse>
+</rapport>

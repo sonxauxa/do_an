@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>CDR</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, #314755, #26a0da);
+            color: white;
+        }
+
+        .card-text {
+            color: black;
+        }
+        .card-title {
+            color: black
+        }
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .portrait {
+            width: 120px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="navbar-brand" href="/">CDR</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'upload' %}">Download file</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'multi' %}">Upload</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/">Admin</a>
+            </li>
+        </ul>
+        <div>
+            <span><img src="IMG_1569582275945_1569596198139.jpg" class="avatar" alt="Avatar">
+                {{ request.user }}</span>
+            <span><a href="{% url 'logout' %}">Log Out</a></span>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container" style="padding-top: 60px">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div>
+            {% block content1 %}
+            {% endblock %}
+        </div>
+        <div>
+            {% block content2 %}
+            {% endblock %}
+        </div>
+        {#        {% if error %}#}
+        {#            {% for i in error %}#}
+        {#                <p>{{ i }}</p>#}
+        {#            {% endfor %}#}
+        {#        {% endif %}#}
+        {#        {% if messages %}#}
+        {#            {% for message in messages %}#}
+        {#                {{ message }}#}
+        {#            {% endfor %}#}
+        {#        {% endif %}#}
+    </div>
+</div>
+</body>
+</html>

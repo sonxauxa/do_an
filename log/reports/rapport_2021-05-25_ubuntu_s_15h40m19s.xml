@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>25/05/2021 : 15:40</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/99eb1d90eb5f0d012f35fcc2a7dedd2229312794354843637ebb7f40b74d0809.doc</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/document</rep_dest>
+    </titre>
+    <resume>
+        <ana>1</ana>
+        <acc>0</acc>
+        <nett>1</nett>
+        <ref>0</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>99eb1d90eb5f0d012f35fcc2a7dedd2229312794354843637ebb7f40b74d0809.doc</nom>
+            <resultat>Nettoyé</resultat>
+            <comment>MS Word Document : Active content was detected and cleaned</comment>
+        </fichier>
+    </analyse>
+</rapport>

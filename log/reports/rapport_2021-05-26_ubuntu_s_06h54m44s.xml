@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>26/05/2021 : 06:54</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/decuong.pdf</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/document/1</rep_dest>
+    </titre>
+    <resume>
+        <ana>1</ana>
+        <acc>1</acc>
+        <nett>0</nett>
+        <ref>0</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>decuong.pdf</nom>
+            <resultat>Accepté</resultat>
+            <comment>PDF Document : No active content was detected</comment>
+        </fichier>
+    </analyse>
+</rapport>

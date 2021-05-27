@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>25/05/2021 : 14:30</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/1</rep_dest>
+    </titre>
+    <resume>
+        <ana>16</ana>
+        <acc>13</acc>
+        <nett>1</nett>
+        <ref>2</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/[Content_Types].xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/_rels/.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>ASCII Text file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/_rels/workbook.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/workbook.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/drawings/drawing1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/drawings/_rels/drawing1.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/worksheets/_rels/sheet1.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/theme/theme1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/styles.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/media/image1.jpg</nom>
+            <resultat>Accepté</resultat>
+            <comment>JPEG Picture : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/worksheets/sheet1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/docProps/app.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/docProps/core.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/drawings/vmlDrawing1.vml</nom>
+            <resultat>Refusé</resultat>
+            <comment>Unauthorized file extension</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx/xl/embeddings/oleObject1.bin</nom>
+            <resultat>Refusé</resultat>
+            <comment>Unauthorized file extension</comment>
+        </fichier>
+        <fichier>
+            <nom>5a2210aa7737a4ceff85e8587927af1145133e3f04a8c2bd287ca487e7aa3fcd.xlsx</nom>
+            <resultat>Nettoyé</resultat>
+            <comment>Open XML document : Cleaned file</comment>
+        </fichier>
+    </analyse>
+</rapport>
