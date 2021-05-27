@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rapport>
+    <titre>
+        <ver-dat>Rapport ExeFilter v1.1.4-alpha6</ver-dat>
+        <hostname>ubuntu</hostname>
+        <user>s</user>
+        <heure>26/05/2021 : 14:48</heure>
+        <rep_src>/home/s/Desktop/djangoProject1/document/calcu.xlsm</rep_src>
+        <rep_dest>/home/s/Desktop/djangoProject1/store/document/4</rep_dest>
+    </titre>
+    <resume>
+        <ana>12</ana>
+        <acc>10</acc>
+        <nett>1</nett>
+        <ref>1</ref>
+        <err>0</err>
+    </resume>
+    <analyse>
+        <fichier>
+            <nom>calcu.xlsm/[Content_Types].xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/_rels/.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>ASCII Text file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/xl/workbook.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/xl/_rels/workbook.xml.rels</nom>
+            <resultat>Accepté</resultat>
+            <comment>Open XML .rels file : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/xl/worksheets/sheet1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/xl/theme/theme1.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/xl/styles.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/xl/sharedStrings.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/xl/vbaProject.bin</nom>
+            <resultat>Refusé</resultat>
+            <comment>Unauthorized file extension</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/docProps/core.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm/docProps/app.xml</nom>
+            <resultat>Accepté</resultat>
+            <comment>Document XML : No active content was detected</comment>
+        </fichier>
+        <fichier>
+            <nom>calcu.xlsm</nom>
+            <resultat>Nettoyé</resultat>
+            <comment>Open XML document : Cleaned file</comment>
+        </fichier>
+    </analyse>
+</rapport>

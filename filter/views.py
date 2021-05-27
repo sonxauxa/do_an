@@ -1,8 +1,6 @@
 import os
 import subprocess
 import time
-
-import numpy as np
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
@@ -72,40 +70,6 @@ def log_out_user(request):
     return redirect('/login/')
 
 
-# class UpdateMulti(LoginRequiredMixin, FormView):
-#     login_url = '/login/'
-#     redirect_field_name = 'redirect_to'
-#     form_class = UpLoad
-#     template_name = 'upload1.html'  # Replace with your template.
-#     success_url = '/'  # Replace with your URL or reverse().
-#     mess = ""
-#
-#     def post(self, request, *args, **kwargs):
-#         form_class = self.get_form_class()
-#         form = self.get_form(form_class)
-#         files = request.FILES.getlist('file_field')
-#         if form.is_valid():
-#             for f in files:
-#                 instance = FileFormUpLoad(file=f, owner=self.request.user.id)
-# #                 instance.save()
-#                 # os.mkdir('/home/s/Desktop/djangoProject1/store/' + str(self.request.user.id))
-#                 subprocess.run('python2 /home/s/Desktop/exefilter/ExeFilter.py /home/s/Desktop/djangoProject1/document/' + f.name + ' ' + '-d' + ' ' + '/home/s/Desktop/djangoProject1/store/pdfs', shell=True)
-#                 # subprocess.run(
-#                 # 'java -jar /home/s/Desktop/DocBleach-master/cli/target/docbleach.jar -in /home/s/Desktop/djangoProject1/document/' + f.name + ' ' + '-out /home/s/Desktop/djangoProject1/store/pdfs/' + f.name, shell=True)
-#             for file_name in os.listdir('/home/s/Desktop/djangoProject1/store/pdfs'):
-#                 a = Pelcon(pdf=file_name, owner=self.request.user.id, name=file_name)
-#                 a.user = request.user
-#                 a.save()
-#
-#             # path = '/home/s/Desktop/djangoProject1/document'
-#             time.sleep(0.5)
-#             for f in os.listdir(path):
-#                 os.remove(os.path.join(path, f))
-#             return self.form_valid(form)
-#         else:
-#             return self.form_invalid(form)
-
-
 class FilterView(generic.ListView):
     model = Pelcon
     template_name = 'upload.html'
@@ -173,7 +137,9 @@ class UpLoadMultiFile(LoginRequiredMixin, FormView):
 def delete_item(request, name):
     event = Pelcon.objects.get(name=name)
     event.delete()
-    path = '/home/s/Desktop/djangoProject1/document'
-    for f in os.listdir(path):
-        os.remove(os.path.join(path, f))
+    path = '/home/s/Desktop/djangoProject1/store/document/' + str(request.user.id)
+    try:
+        os.remove(os.path.join(path, name))
+    except Exception as e:
+        return HttpResponse('file da duoc xoa')
     return redirect('/download/')
